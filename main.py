@@ -10,6 +10,8 @@ import base64 # For decoding base64 image data
 # Initialize FastAPI app
 app = FastAPI()
 
+api_key = os.getenv("GOOGLE_API_KEY")
+
 # Configure CORS to allow requests from your React frontend.
 # IMPORTANT: In a production environment, restrict origins to your specific frontend URL.
 app.add_middleware(
